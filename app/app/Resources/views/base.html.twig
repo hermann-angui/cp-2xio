@@ -3,11 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset("public/bootstrap-3.3.7/css/bootstrap.min.css")}}">
+            <link rel="stylesheet" href="{{ asset("public/css/preloader.css")}}">
+            <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <style>
+            * {
+                font-family: 'Poppins', sans-serif !important;
+            }
+        </style>
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset("public/js/jquery.min.js")}}"></script>
+            <script src="{{ asset("public/bootstrap-3.3.7/js/bootstrap.min.js")}}"></script>
+            <script src="{{ asset("public/js/bootstrap-typeahead.min.js")}}"></script>
+        {% endblock %}
     </body>
 </html>

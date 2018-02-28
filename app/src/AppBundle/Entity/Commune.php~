@@ -1,0 +1,94 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Commun
+ *
+ * @ORM\Table(name="communes")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\CommuneRepository")
+ */
+class Commune
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="id_ville", type="string", length=255, nullable=true)
+     */
+    private $idVille;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255, nullable=true)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codePostal", type="string", length=255, nullable=true)
+     */
+    private $codePostal;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="longitude", type="string", length=255, nullable=true)
+     */
+    private $longitude;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="latitude", type="string", length=255, nullable=true)
+     */
+    private $latitude;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set idVille
+     *
+     * @param string $idVille
+     *
+     * @return Commun
+     */
+    public function setIdVille($idVille)
+    {
+        $this->idVille = $idVille;
+
+        return $this;
+    }
+
+    /**
+     * Get idVille
+     *
+     * @return string
+     */
+    public function getIdVille()
+    {
+        return $this->idVille;
+    }
+}
+

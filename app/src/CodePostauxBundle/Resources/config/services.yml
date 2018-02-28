@@ -1,0 +1,4 @@
+services:
+    code_postaux.geotargetting.helper:
+        class: CodePostauxBundle\Helper\GeoTargettingHelper
+        arguments: ['@service_container']

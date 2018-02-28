@@ -1,0 +1,1 @@
+2018/02/28 06:10:38 [error] 9#0: *308 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.20.0.1, server: symfony.local, request: "GET /loaddata HTTP/1.1", upstream: "fastcgi://172.20.0.4:9000", host: "localhost"

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h2>API Client Credenttials</h2>
+        <p>Recupérer vos paramètres API:</p>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Paramètres</th>
+                <th>Valeurs</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ credentials['client_id'] }}</td>
+                <td>{{ credentials['client_secret'] }}</td>
+                <td>{{ credentials['username'] }}</td>
+                <td>{{ credentials['password'] }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+
+

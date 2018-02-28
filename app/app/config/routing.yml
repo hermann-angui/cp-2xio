@@ -1,3 +1,7 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+code_postaux:
+    resource: "@CodePostauxBundle/Controller/"
+    type:     annotation
